@@ -37,5 +37,7 @@ jobs:
         
       - name: publish
         uses: crazy-max/ghaction-github-pages@v2.5.0
+        env: 
+          ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
         with:
           build_dir: dist
