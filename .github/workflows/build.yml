@@ -34,7 +34,8 @@ jobs:
 
       - name: npm build
         env: 
-          SUB_PATH: ${{github.repository}}
+          REPOSITORY_PATH: ${{github.repository}}
+          OWNER: ${{github.repository_owner}}
         run: npm run build
         
       - name: publish
